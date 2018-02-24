@@ -1,0 +1,41 @@
+﻿/*----Body Styles----*/
+.site-grid {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "logo logo main main main main feedback feedback"
+        "nav nav main main main main feedback feedback"
+        "footer footer footer footer footer footer footer footer"
+}
+
+/*----Header Styles----*/
+header {
+    grid-area: logo;
+    #hamburger{
+        display:none;
+    }
+}
+/*-----Nav Styles------*/
+nav {
+    grid-area: nav;
+}
+#mainNav {
+    &.closed {
+        max-height: 1000em;
+    }
+}
+/*-----Main Styles-----*/
+
+main {
+    grid-area: main;
+}
+#feedback{
+    grid-area:feedback;
+}
+/*----Footer Styles----*/
+
+footer {
+    grid-area: footer;
+}
