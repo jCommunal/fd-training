@@ -53,7 +53,7 @@ header {
     width: 100%;
     justify-content: flex-start;
     padding: $gutter;
-    background-color: $darkGray;
+    background-color: $tacomaGray;
 
     section {
         padding-bottom: $gutter;
@@ -75,10 +75,10 @@ header {
     #tfdName {
         font-size: 2rem;
         padding-left: .5em;
-
+        color: white;
         span {
             font-size: 1rem;
-            color: $support3;
+            color: $secondaryColor;
         }
     }
 
@@ -147,9 +147,11 @@ header {
         padding-left: 5%;
         li {
             padding: 5px;
-
+            &.locked{
+                display:none;
+            }
             >a:hover {
-                color: $support1;
+                color: $support2;
             }
 
             span {
@@ -165,10 +167,10 @@ header {
                 }
 
                 span.unlocked {
-                    color: lighten($support3, 40%);
+                    color: lighten($support3, 50%);
                 }
                 span.unlocked:hover{
-                    color: $support1;
+                    color: $support2;
                 }
                 span.locked{
                     display:none;

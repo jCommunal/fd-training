@@ -1,0 +1,4 @@
+﻿The navbar for the site should be responsive. It should fit small, medium and large screens. On large screens, the navbar should have a max width. The text size should be adjusted for each screen size.
+
+
+City of Tacoma Look & Feel:

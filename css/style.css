@@ -145,11 +145,11 @@ header {
   width: 100%;
   justify-content: flex-start;
   padding: 2%;
-  background-color: #151515; }
+  background-color: #595e62; }
   header section {
     padding-bottom: 2%; }
   header h1, header h2, header h3, header h4, header h5, header h6, header p, header span, header ul, header li, header a {
-    color: #77bed2; }
+    color: #e0d2b6; }
   header #tfdLogo {
     flex: 0 0 5rem;
     font-size: 1.5rem; }
@@ -157,10 +157,11 @@ header {
       width: 100%; }
   header #tfdName {
     font-size: 2rem;
-    padding-left: .5em; }
+    padding-left: .5em;
+    color: white; }
     header #tfdName span {
       font-size: 1rem;
-      color: #747e80; }
+      color: #efe8da; }
   header #hamburger {
     padding-left: 1em;
     color: white; }
@@ -174,7 +175,7 @@ header {
 /*-----Nav Styles------*/
 #mainNav {
   overflow: hidden;
-  background-color: #655b5b;
+  background-color: #0a3b61;
   color: white; }
   #mainNav.closed {
     max-height: 0; }
@@ -192,47 +193,49 @@ header {
     filter: drop-shadow(1px 1px rgba(0, 0, 0, 0.4)); }
   #mainNav #siteNav li {
     padding: 5%;
-    border-bottom: 1px solid #504848;
-    border-top: 0.5px solid #726767;
+    border-bottom: 1px solid #06253c;
+    border-top: 0.5px solid #0c4978;
     font-size: 1.5rem; }
   #mainNav #siteNav .nav-text {
     text-shadow: rgba(0, 0, 0, 0.4) 1px 1px; }
   #mainNav #siteNav li:hover {
-    background-color: #584f4f; }
+    background-color: #082d4a; }
   #mainNav .current-page {
-    background-color: #5d5454; }
+    background-color: #093353; }
   #mainNav #subMenu {
     padding-top: 10px;
     padding-left: 5%; }
     #mainNav #subMenu li {
       padding: 5px; }
+      #mainNav #subMenu li.locked {
+        display: none; }
       #mainNav #subMenu li > a:hover {
-        color: #a5d1f3; }
+        color: #e0d2b6; }
       #mainNav #subMenu li span {
         font-size: 1.2rem; }
       #mainNav #subMenu li .training-item {
         padding-left: 4%;
-        color: #747e80; }
+        color: #55534d; }
         #mainNav #subMenu li .training-item > span {
           font-size: 1rem; }
         #mainNav #subMenu li .training-item span.unlocked {
-          color: #dee1e2; }
+          color: #d3d2ce; }
         #mainNav #subMenu li .training-item span.unlocked:hover {
-          color: #a5d1f3; }
+          color: #e0d2b6; }
         #mainNav #subMenu li .training-item span.locked {
           display: none; }
     #mainNav #subMenu .section-head {
-      background-color: #ececec;
-      color: #747e80;
+      background-color: #efe8da;
+      color: #55534d;
       padding: 5px;
       width: 50%;
       border-radius: 4px;
       box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 2px;
       text-shadow: rgba(0, 0, 0, 0.3) 1px 1px; }
     #mainNav #subMenu .section-head:hover {
-      background-color: #77bed2; }
+      background-color: #e0d2b6; }
       #mainNav #subMenu .section-head:hover > span {
-        color: #747e80; }
+        color: #55534d; }
 
 /*-----Main Styles-----*/
 /*#trainingNav {
@@ -254,7 +257,7 @@ main {
 /*----Footer Styles----*/
 footer {
   min-height: 50px;
-  background-color: #584f4f;
+  background-color: #082d4a;
   padding: 2%; }
   footer h1, footer h2, footer h3, footer h4, footer h5, footer h6, footer p, footer span, footer ul, footer li, footer a {
     color: white; }

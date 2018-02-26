@@ -1,13 +1,15 @@
 ﻿/*Global Colors*/
-$primaryColor: #655b5b;
-$secondaryColor: #ececec;
+$primaryColor: #0a3b61;
+$secondaryColor: #efe8da;
 $tertiaryColor:#f1f9fc;
 $darkGray: #151515;
+$tacomaGray: #595e62;
+
 
 /*Support Colors*/
 $support1:#a5d1f3;
-$support2:#77bed2;
-$support3:#747e80;
+$support2: darken($secondaryColor, 10%);
+$support3:#55534d;
 $support4:#000000;
 
 /*Font Variables*/
