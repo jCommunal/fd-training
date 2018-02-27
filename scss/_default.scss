@@ -52,12 +52,9 @@ header {
     display: flex;
     width: 100%;
     justify-content: flex-start;
-    padding: $gutter;
+    align-items: center;
+    padding: 12px 8px;
     background-color: $tacomaGray;
-
-    section {
-        padding-bottom: $gutter;
-    }
 
     h1, h2, h3, h4, h5, h6, p, span, ul, li, a {
         color: $support2;
@@ -74,26 +71,34 @@ header {
 
     #tfdName {
         font-size: 2rem;
-        padding-left: .5em;
+        padding-left: 8px;
         color: white;
-        span {
+        h4{
+            line-height:1.2em;
+            color:white;
+        }
+        p {
             font-size: 1rem;
+            line-height:1.2rem;
             color: $secondaryColor;
         }
     }
 
     #hamburger {
+        
         button {
             border: 1px white solid;
             border-radius: 4px;
+            background-color:rgba(255,255,255,.1);
         }
 
-        padding-left: 1em;
+        padding-left: 3em;
         color: white;
 
         .fa-bars {
             padding: 4px;
             font-size: 2rem;
+            color:white;
         }
     }
 }
@@ -114,7 +119,7 @@ header {
 
     .nav-icon {
         flex: 0 0 2.5rem;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         color: $support1;
         filter: drop-shadow(1px 1px rgba(0,0,0,.4));
     }
@@ -124,7 +129,7 @@ header {
             padding: 5%;
             border-bottom: 1px solid darken($primaryColor,8%);
             border-top: .5px solid lighten($primaryColor,5%);
-            font-size: 1.5rem;
+            font-size: 1.1rem;
         }
 
         .nav-text {
@@ -199,15 +204,6 @@ header {
 //nav
 
 /*-----Main Styles-----*/
-/*#trainingNav {
-    background-color: lighten($primaryColor, 50%);
-    padding: $gutter+1;
-    
-    ul li ul li {
-        font-size: 1.2rem;
-        padding: 1% 1% 1% $gutter ;
-    }
-}*/
 
 main{
     padding: 5%;
@@ -230,12 +226,5 @@ footer {
     }
 }
 
-
-
-/*.tfd-logo{
-    display:block;
-    width:75%;
-    margin: $gutter auto;
-}*/
 
 

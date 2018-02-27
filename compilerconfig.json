@@ -2,5 +2,9 @@
   {
     "outputFile": "css/style.css",
     "inputFile": "scss/style.scss"
+  },
+  {
+    "outputFile": "scss/_medium.css",
+    "inputFile": "scss/style.scss"
   }
 ]

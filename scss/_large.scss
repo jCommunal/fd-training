@@ -1,1 +1,24 @@
 ﻿/*-----Body Styles-----*/
+.site-grid {
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: minmax(225px, 1fr) 4fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "logo  main   feedback "
+        "nav  main  feedback "
+        "nav footer  footer"
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+
+    #tfdLogo {
+        img {
+            width: 100%;
+        }
+    }
+}
