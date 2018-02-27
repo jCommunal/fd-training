@@ -1,0 +1,95 @@
+
+<html>
+<head>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+    input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #2b66b5;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color:#4c83cc ;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+
+</style>
+</head>
+<body>
+
+<h2>Contact</h2>
+<p>If there are any question are concerns, you can submit a form and we will get back to you.</p>
+
+<section class="row">
+  <section class="column" style="background-color:#fff;">
+
+
+      <h3>Send us a message!</h3>
+<section class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    
+    <label for="email">Email</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your email..">
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+    </form>
+   </section>
+</section>
+    
+<section class="column" style="background-color:#fff;">
+
+<h3>Visit the Tacoma Fire Department!</h3>
+<section id="map" >
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.0464450586946!2d-122.44514898469282!3d47.2547950791629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490550a71d895e7%3A0x32abd587f7450e0f!2sTacoma+Fire+Department!5e0!3m2!1sen!2sus!4v1519689644236" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></section>
+   
+  </section>
+</section>
+    
+
+</body>
+</html>
