@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en"
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-size: 20px;
+            font-family: sans-serif;
+            color: #333;
+        }
+
+        .question {
+            font-weight: 600;
+        }
+
+        .answers {
+            margin-bottom: 20px;
+        }
+
+            .answers label {
+                display: block;
+            }
+
+        #submit {
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: #279;
+            color: #fff;
+            border: 0px;
+            border-radius: 3px;
+            padding: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+            #submit:hover {
+                background-color: #38a;
+            }
+    </style>
+</head>
+<body>
+    <section class="quiz container">
+        <sec id="quiz"></sec>
+    </section>
+    <button id="submit">Submit Quiz</button>
+    <sec id="results"></sec>
+
+
+
+
+    <script> 
+        (function () {
+
+            const myQuestions = [
+
+                {
+
+                    question: "A pile of rags are burning, what type of fire is this?",
+
+                    answers: {
+
+                        a: "A",
+                        b: "B",
+                        c: "C",
+                        d: "D"
+
+                    },
+
+                    correctAnswer: "a"
+
+                },
+                {
+
+                    question: "How far away should you be when attempting to extinguish a fire with a fire extinguisher?",
+
+                    answers: {
+
+                        a: "2-3 feet",
+                        b: "4-6 feet",
+                        c: "10-12 feet",
+                        d: "20 feet"
+
+                    },
+
+                    correctAnswer: "b"
+
+                },
+                {
+
+                    question: "If any part of your clothing catches on fire you should react by :",
+
+                    answers: {
+
+                        a: "Pouring gasoline on yourself",
+                        b: "Running around in circles",
+                        c: "Immediately drop to the ground and begin rolling to attempt to extinguish the flame",
+                        d: "Resign yourself to your fate"
+
+                    },
+
+                    correctAnswer: "c"
+
+                }
+            ];
+
+            function buildQuiz() {
+
+                const output = [];
+
+                myQuestions.forEach(
+                    (currentQuestion, questionNumber) => {
+
+                        const answers = [];
+
+                        for (letter in currentQuestion.answers) {
+
+                            answers.push(
+                                `<label> 
+                                <input type="radio" name="question${questionNumber}" value="${letter}">
+                                ${letter} : ${currentQuestion.answers[letter]}
+                                </label>`
+                            );
+
+                        }
+                        output.push(
+                            `<section class="question">
+                            ${currentQuestion.question} </section>
+                            <sec class="answers"> ${answers.join('')} </sec>`
+
+                        );
+
+                    });
+
+                quizContainer.innerHTML = output.join("");
+
+            }
+
+            function showResults() {
+
+                const answerContainers = quizContainer.querySelectorAll('.answers');
+
+                let numCorrect = 0;
+
+                myQuestions.forEach((currentQuestion, questionNumber) => {
+
+                    const answerContainer = answerContainers[questionNumber];
+                    const selector = `input[name=question${questionNumber}]:checked`;
+                    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+
+                    if (userAnswer === currentQuestion.correctAnswer) {
+
+                        numCorrect++;
+
+                        answerContainers[questionNumber].style.color = 'lightgreen';
+
+                    } else {
+                        answerContainers[questionNumber].style.color = 'red';
+                    }
+                });
+
+                resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+            }
+
+
+
+            const quizContainer = document.getElementById('quiz');
+            const resultsContainer = document.getElementById('results');
+            const submitButton = document.getElementById('submit');
+            //display quiz
+            buildQuiz();
+
+
+            // submit show results
+
+            submitButton.addEventListener('click', showResults);
+
+        })();
+
+    </script>
+
+</body>
+
+</html>
